@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "volta-test"
+version = "0.1.0"
+description = ""
+authors = ["Santiago SILVA <16252054+sssilvar@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "volta_test"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+wfdb = "^4.1.1"
+pywavelets = "^1.4.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
