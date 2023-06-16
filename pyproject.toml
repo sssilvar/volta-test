@@ -4,15 +4,25 @@ version = "0.1.0"
 description = ""
 authors = ["Santiago SILVA <16252054+sssilvar@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "volta_test"}]
+packages = [{include = "voltatest"}]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.10"
 wfdb = "^4.1.1"
 pywavelets = "^1.4.1"
+torch = "^2.0.1"
+seaborn = "^0.12.2"
+streamlit = "^1.23.1"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.2"
+jupyter = "^1.0.0"
+tabulate = "^0.9.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.poetry.scripts]
+volta_download_data = "voltatest.download:main"
