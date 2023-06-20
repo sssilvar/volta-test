@@ -13,6 +13,7 @@ pywavelets = "^1.4.1"
 torch = "^2.0.1"
 seaborn = "^0.12.2"
 streamlit = "^1.23.1"
+neurokit2 = "^0.2.4"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -26,3 +27,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 volta_download_data = "voltatest.download:main"
+nkit_reformat = "voltatest.data.dl_and_format_neurokit:main"

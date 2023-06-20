@@ -13,7 +13,10 @@ class MITBIHDataset:
 
     def __getitem__(self, index):
         """Load the record and annotation"""
-        subject_id = self.record_names[index]
+        if isinstance(index, int):
+            subject_id = self.record_names[index]
+        else:
+            subject_id = index
         record = wfdb.rdrecord(str(self.dl_dir / subject_id))
         annotation = wfdb.rdann(str(self.dl_dir / subject_id), 'atr')
         return record, annotation
